@@ -149,6 +149,60 @@ TASKS = [
             TestCase("15", "1 2 2 3 3 3 4 4 4 4 5 5 5 5 5"),
         ],
     ),
+    TaskConfig(
+        task_id="418",
+        name="Числа Фибоначчи",
+        filename="Задание 418.py",
+        time_limit=5.0,
+        memory_limit_bytes=64 * 1024 * 1024,
+        forbidden_constructs=[],
+        check_pep8=True,
+        validator=exact_match,
+        test_cases=[
+            TestCase("1", "1"),
+            TestCase("2", "1 1"),
+            TestCase("5", "1 1 2 3 5"),
+            TestCase("7", "1 1 2 3 5 8 13"),
+            TestCase("10", "1 1 2 3 5 8 13 21 34 55"),
+            TestCase("15", "1 1 2 3 5 8 13 21 34 55 89 144 233 377 610"),
+        ],
+    ),
+    TaskConfig(
+        task_id="417",
+        name="Анализ последовательности",
+        filename="Задание 417.py",
+        time_limit=5.0,
+        memory_limit_bytes=64 * 1024 * 1024,
+        forbidden_constructs=[],
+        check_pep8=True,
+        validator=exact_match,
+        test_cases=[
+            TestCase(
+                "5\n3\n-1\n0\n5\n-2",
+                "Нулей: 1\nОтрицательных: 2\nСреднее положительных: 4.00",
+            ),
+            TestCase(
+                "6\n1\n2\n3\n-1\n-2\n0",
+                "Нулей: 1\nОтрицательных: 2\nСреднее положительных: 2.00",
+            ),
+            TestCase(
+                "3\n10\n20\n30",
+                "Нулей: 0\nОтрицательных: 0\nСреднее положительных: 20.00",
+            ),
+            TestCase(
+                "4\n0\n0\n-3\n6",
+                "Нулей: 2\nОтрицательных: 1\nСреднее положительных: 6.00",
+            ),
+            TestCase(
+                "5\n-5\n-10\n0\n0\n7",
+                "Нулей: 2\nОтрицательных: 2\nСреднее положительных: 7.00",
+            ),
+            TestCase(
+                "4\n1\n2\n3\n4",
+                "Нулей: 0\nОтрицательных: 0\nСреднее положительных: 2.50",
+            ),
+        ],
+    ),
 ]
 
 if __name__ == "__main__":
