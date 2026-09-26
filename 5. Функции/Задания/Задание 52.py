@@ -6,15 +6,11 @@ def is_perfect(n):
     return n == sum
 
 
-
-
 num = 1
 counter = 0
 n = int(input())
 while counter != n:
     num += 1
     if is_perfect(num):
-       print(num, end=' ')
-       counter +=1
-
-
+        print(num, end=' ')
+        counter += 1
